@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-100">
+<html lang="en" class="h-full bg-neutral-800">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
         <x-navbar />
 
         <main>
-            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 text-white">
                 {{ $slot }}
             </div>
         </main>

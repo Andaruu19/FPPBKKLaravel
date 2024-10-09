@@ -1,17 +1,18 @@
 <header class="antialiased">
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap justify-between items-center">
             <div class="flex justify-start items-center">
-                <a href="#" class="flex mr-4">
+                {{-- <a href="#" class="flex mr-4">
                     <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                </a>
+                </a> --}}
 
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
+                    <div class="font-bold ml-10 flex items-baseline space-x-4 text-white">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/">Home</a>
-                        <a href="/album">Album</a>
+                        <a href=""></a>
+                        <a href="/album">Daftar Saya</a>
                     </div>
                 </div>
 
