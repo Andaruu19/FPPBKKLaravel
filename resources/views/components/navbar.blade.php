@@ -1,13 +1,46 @@
 <header class="antialiased">
-    <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5">
+    <body class="bg-gray-950">
+        <div class="container w-screen relative">
+            <div class="navbar bg-zinc-900/[0.5] p-3 py-1 flex items-center justify-between  w-screen fixed z-10">
+                <section class="flex items-center">
+                    <img class="w-32" src='{{ URL('images/logo-main.png') }}' alt="">
+                    <section class="flex text-white ps-3">
+                        <a href="/" class="ps-3 text-s cursor-pointer">Home</a>
+                        <a href="/album" class="ps-3 text-s cursor-pointer">Film</a>
+                        <a href="/collection" class="ps-3 text-s cursor-pointer">Koleksi Saya</a>
+                    </section>
+                </section>
+                <section class="justify-right">
+                    <form class="max-w-md mx-auto justify-end">   
+                        <label for="default-search" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-white border border-gray-300 rounded-lg bg-black focus:ring-red-800 focus:border-red-800" placeholder="Search" required />
+                            <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-neutral-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+            
+        </div>
+        
+    </body>
+</header>
+
+    {{-- <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap justify-between items-center">
-            <div class="flex justify-start items-center">
+            <div class="flex justify-start items-center"> --}}
                 {{-- <a href="#" class="flex mr-4">
                     <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
                 </a> --}}
 
-                <div class="hidden md:block">
+                {{-- <div class="hidden md:block">
                     <div class="font-bold ml-10 flex items-baseline space-x-4 text-white">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/">Home</a>
@@ -27,10 +60,10 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
-                </button>
+                </button> --}}
                 {{-- INI BUAT SEARCH BAR NYA, SEMENTARA KU OFF IN DULU --}}
 
-                <form action="#" method="GET" class="hidden lg:block lg:pl-2">
+                {{-- <form action="#" method="GET" class="hidden lg:block lg:pl-2">
                     <label for="topbar-search" class="sr-only">Search</label>
                     <div class="relative mt-1 lg:w-96">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -44,7 +77,7 @@
                             class="bg-gray-50 border  border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-9 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Search" autocomplete="off">
                     </div>
-                </form>
+                </form> --}}
 
                 <!-- Dropdown menu -->
                 {{-- <div class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700"
@@ -390,7 +423,6 @@
                         </li>
                     </ul>
                 </div> --}}
-            </div>
+            {{-- </div>
         </div>
-    </nav>
-</header>
+    </nav> --}}

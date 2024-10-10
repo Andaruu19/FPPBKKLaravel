@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/album', function () {
     return view('album');
 });
+
+Route::get('/collection', function () {
+    return view('collection');
+});
