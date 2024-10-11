@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Movie;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,4 +13,10 @@ Route::get('/album', function () {
 
 Route::get('/collection', function () {
     return view('collection');
+});
+
+Route::get('/movies', function () {
+    return view('movies', [
+        'movies' => Movie::all()
+    ]);
 });
