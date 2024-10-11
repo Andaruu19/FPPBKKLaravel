@@ -7,7 +7,7 @@
                     <img class="w-32" src='{{ URL('images/logo-main.png') }}' alt="">
                     <section class="flex text-white ps-3 gap-4">
                         <a href="/" class="ps-3 text-s cursor-pointer">Home</a>
-                        <a href="/movies" class="ps-3 text-s cursor-pointer">Film</a>
+                        <a href="/movies" class="ps-3 text-s cursor-pointer">Films</a>
                         <a href="/albums" class="ps-3 text-s cursor-pointer">Albums</a>
                     </section>
                 </section>
