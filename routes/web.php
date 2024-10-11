@@ -7,8 +7,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/album', function () {
-    return view('album');
+Route::get('/albums', function () {
+    return view('albums');
 });
 
 Route::get('/collection', function () {

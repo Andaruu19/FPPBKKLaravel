@@ -1,11 +1,19 @@
 <x-layout>
     <section class="dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div class="grid gap-8 lg:grid-cols-3">
+        <div class="py-8 px-4 mx-auto max-w-screen-lg lg:py-16 lg:px-6">
+            <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2">
                 @foreach ($movies as $movie)
                     <article
-                        class="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                        <div class="flex justify-between items-center mb-5 text-gray-500">
+                        class=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex justify-center">
+                            <img src="https://placehold.co/300x400" alt="" class="rounded-lg">
+                        </div>
+                        <div class="flex justify-between items-center text-gray-500 p-3">
+                            <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">
+                                    {{ $movie->title }}
+                                </a>
+                            </h2>
                             <span
                                 class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                                 <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20"
@@ -16,19 +24,10 @@
                                 </svg>
                                 {{ $movie->genre->name }}
                             </span>
-                            <span class="text-sm">14 days ago</span>
                         </div>
-                        <div class="flex justify-center">
-                            <img src="https://placehold.co/300x400" alt="">
-                        </div>
-                        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            <a href="#">
-                                {{ $movie->title }}
-                            </a>
-                        </h2>
-                        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+                        {{-- <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
                             {{ $movie->description }}
-                        </p>
+                        </p> --}}
                         {{-- <div class="flex justify-between items-center">
                             <div class="flex items-center space-x-4">
                                 <img class="w-7 h-7 rounded-full"

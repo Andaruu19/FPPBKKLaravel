@@ -5,10 +5,10 @@
             <div class="navbar bg-zinc-900/[0.5] p-3 py-1 flex items-center justify-between  w-screen fixed z-10">
                 <section class="flex items-center">
                     <img class="w-32" src='{{ URL('images/logo-main.png') }}' alt="">
-                    <section class="flex text-white ps-3">
+                    <section class="flex text-white ps-3 gap-4">
                         <a href="/" class="ps-3 text-s cursor-pointer">Home</a>
-                        <a href="/album" class="ps-3 text-s cursor-pointer">Film</a>
-                        <a href="/collection" class="ps-3 text-s cursor-pointer">Koleksi Saya</a>
+                        <a href="/movies" class="ps-3 text-s cursor-pointer">Film</a>
+                        <a href="/albums" class="ps-3 text-s cursor-pointer">Albums</a>
                     </section>
                 </section>
                 <section class="justify-right">
