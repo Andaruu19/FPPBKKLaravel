@@ -33,18 +33,6 @@ Route::get('/movies/{movie:slug}', function (Movie $movie) {
     ]);
 });
 
-Route::get('/huann', function () {
-    return view('huann', [
-        'albums' => Album::all()
-    ]);
-});
-
-Route::get('/huann/{album:slug}', function (Album $album) {
-    return view('album', [
-        'album' => $album
-    ]);
-});
-
 Route::post('/albums', [AlbumController::class, 'store']);
 
 Route::resource('albums', AlbumController::class);

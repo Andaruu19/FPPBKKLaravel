@@ -57,14 +57,16 @@
                     </svg>
                     Play
                 </a>
-                <button data-modal-target="select-modal" data-modal-toggle="select-modal" type="button">
+                <button data-modal-target="select-modal{{ $movie->id }}" data-modal-toggle="select-modal{{ $movie->id }}" type="button">
                     <div href="#"
                         class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                         Add to album
                     </div>
                 </button>
 
-                {{-- <x-addtoalbum /> --}}
+                <x-addtoalbum >
+                    {{ $movie->id }}
+                </x-addtoalbum>
             </div>
         </div>
     </section>

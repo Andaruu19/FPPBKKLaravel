@@ -25,7 +25,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             GenreSeeder::class,
-            AlbumSeeder::class,
         ]);
 
         Movie::factory(100)->recycle([
