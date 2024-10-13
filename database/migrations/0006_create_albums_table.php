@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('slug')->unique();
             $table->string('name');
+            $table->longText('deskripsi');
             $table->timestamps();
         });
     }
@@ -25,5 +26,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('albums');
+        Schema::table('albums', function (Blueprint $table) {
+            $table->dropUnique(['slug']);
+        });
     }
 };
