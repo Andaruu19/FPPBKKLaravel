@@ -1,7 +1,9 @@
 <header class="antialiased">
+
     <body class="bg-neutral-800">
         <div class="container w-screen relative">
-            <div id="navbar" class="navbar bg-zinc-900/[0.5] p-3 py-1 flex items-center justify-between w-screen fixed z-10 transition-opacity duration-300">
+            <div id="navbar"
+                class="navbar bg-zinc-900/[0.5] p-8 py-1 flex items-center justify-between w-screen fixed z-10 transition-opacity duration-300">
                 <section class="flex items-center">
                     <img class="w-32" src='{{ URL('images/logo-main.png') }}' alt="">
                     <section class="flex text-white ps-3 gap-4">
@@ -11,7 +13,7 @@
                     </section>
                 </section>
                 <section class="justify-right">
-                    <form class="max-w-md mx-auto justify-end">
+                    <form class="max-w-sm mx-auto justify-end w-screen">
                         <label for="default-search" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                         <div class="relative">
                             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -33,4 +35,3 @@
         </div>
     </body>
 </header>
-
