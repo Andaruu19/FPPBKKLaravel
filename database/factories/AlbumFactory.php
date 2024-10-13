@@ -17,8 +17,9 @@ class AlbumFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence,  // Menghasilkan judul album acak
+            'name' => $this->faker->sentence,
             'slug' => $this->faker->unique()->slug(),
+            'deskripsi' => $this->faker->sentence,
         ];
     }
 }
