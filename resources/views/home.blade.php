@@ -1,6 +1,6 @@
 <x-layout>
     <section class="dark:bg-gray-900">
-        <div class="max-w-screen-xl flex justify-center items-center mx-auto text-center lg:py-4000 lg:px-6 h-screen">
+        <div class="max-w-screen-xl flex justify-center items-center mx-auto text-center h-screen">
             <figure class="max-w-screen-md mx-auto">
                 <section class=" py-8 flex items-center justify-center mt-6 space-x-3">
                     <img class="w-128" src='{{ URL('images/logo-main.png') }}' alt="">

@@ -76,7 +76,7 @@
                                     <dl class="w-1/2 max-w-sm md:col-span-3 order-1 md:order-1">
                                         <img class="rounded" src="https://placehold.co/300x200" alt="" />
                                     </dl>
-                                    <dl class="md:col-span-3 order-3 md:order-1">
+                                    <dl class="md:col-span-3 order-3 md:order-1 items-center">
                                         <dd class="text-base font-semibold text-white">
                                             <a href="#" class="hover:underline">{{ $album->name }}</a>
                                         </dd>
