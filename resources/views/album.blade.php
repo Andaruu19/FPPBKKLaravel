@@ -73,7 +73,7 @@
 
 
                         <a href="/movies/{{ $movie->slug }}">
-                            <img class="rounded-t-lg" src="{{ URL('images/bg1.jpg') }}" alt="" />
+                            <img class="rounded-t-lg" src="{{ URL($movie->imagepath) }}" alt="" />
                         </a>
                         <!-- Gambar film -->
 

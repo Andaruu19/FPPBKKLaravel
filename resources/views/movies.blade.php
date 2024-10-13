@@ -6,7 +6,7 @@
                     <div
                         class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="/movies/{{ $movie->slug }}">
-                            <img class="rounded-t-lg" src="{{ URL('images/bg1.jpg') }}" alt="" />
+                            <img class="rounded-t-lg" src="{{ URL($movie->imagepath) }}" alt="" />
                         </a>
                         <div class="p-4 flex flex-col">
                             <div class="flex justify-between items-center text-gray-500">

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('title');
             $table->longText('description');
+            $table->string('imagepath');
             $table->year('year');
             $table->timestamps();
             $table->foreignId('genre_id')->constrained(
