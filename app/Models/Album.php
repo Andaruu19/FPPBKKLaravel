@@ -11,8 +11,16 @@ class Album extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'deskripsi', 'slug'];
+
     public function movies(): BelongsToMany
     {
         return $this->belongsToMany(Movie::class);
     }
+
+    public function index()
+{
+    $albums = Album::all();
+    return view('albums.index', compact('albums'));
+}
 }

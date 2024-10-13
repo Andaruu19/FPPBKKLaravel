@@ -4,13 +4,16 @@ use App\Models\Album;
 use App\Models\Movie;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumMovieController;
+use App\Http\Controllers\AlbumController;
 
 Route::get('/', function () {
     return view('home');
 });
 
 Route::get('/albums', function () {
-    return view('albums');
+    return view('albums', [
+        'albums' => Album::all()
+    ]);
 });
 
 Route::get('/collection', function () {
@@ -41,6 +44,10 @@ Route::get('/huann/{album:slug}', function (Album $album) {
         'album' => $album
     ]);
 });
+
+Route::post('/albums', [AlbumController::class, 'store']);
+
+Route::resource('albums', AlbumController::class);
 
 Route::delete('/albums/movies/{idAlbum}/{idMovie}', [AlbumMovieController::class, 'removeMovie'])->name('album.removeMovie');
 
