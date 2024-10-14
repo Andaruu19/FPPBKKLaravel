@@ -40,3 +40,5 @@ Route::resource('albums', AlbumController::class);
 Route::delete('/albums/movies/{idAlbum}/{idMovie}', [AlbumMovieController::class, 'removeMovie'])->name('album.removeMovie');
 
 Route::post('/albums/movies/{idAlbum}/{idMovie}', [AlbumMovieController::class, 'addMovie'])->name('album.addMovie');
+
+Route::get('/albums/{slug}', [AlbumController::class, 'show'])->name('albums.show');
