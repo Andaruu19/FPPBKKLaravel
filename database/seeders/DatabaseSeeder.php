@@ -24,12 +24,18 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            // AlbumSeeder::class,
+            // ActorSeeder::class,
             GenreSeeder::class,
+            MovieSeeder::class,
+
         ]);
 
-        Movie::factory(100)->recycle([
-            Genre::all(),
-            Actor::factory(10)->create(),
-        ])->create();
+        // Movie::factory(100)->recycle([
+        //     Genre::all(),
+        //     Actor::factory(10)->create(),
+        // ])->create();
+
+
     }
 }
