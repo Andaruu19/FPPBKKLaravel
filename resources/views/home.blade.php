@@ -17,10 +17,6 @@
                     />
                 </svg>
                 <blockquote>
-                    <p class="text-2xl font-medium text-white">
-                        "Proyek kecil untuk Final Project Laravel PBKK, karena programmer nya skill issue yaa jadi kita
-                        namain nextfix aja karena ngefix nya nggak selesai-selesai"
-                    </p>
                 </blockquote>
                 <figcaption class="mt-6 flex items-center justify-center space-x-3">
                     <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">

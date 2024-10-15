@@ -14,7 +14,11 @@
                     </section>
                 </section>
                 <section class="justify-right">
-                    <form class="mx-auto w-screen max-w-sm justify-end">
+                    <form
+                        class="mx-auto w-screen max-w-sm justify-end"
+                        action="{{ route('movies.search') }}"
+                        method="GET"
+                    >
                         <label for="default-search" class="sr-only mb-2 text-sm font-medium text-white">Search</label>
                         <div class="relative">
                             <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
@@ -35,7 +39,9 @@
                                 </svg>
                             </div>
                             <input
-                                type="search"
+                                type="text"
+                                name="query"
+                                value="{{ request('query') }}"
                                 id="default-search"
                                 class="block w-full rounded-lg border border-gray-300 bg-black p-4 ps-10 text-sm text-white focus:border-red-800 focus:ring-red-800"
                                 placeholder="Search"
