@@ -62,4 +62,11 @@ class AlbumController extends Controller
         return redirect()->route('albums.index')->with('success', 'Album deleted successfully.');
     }
 
+    public function show($slug)
+    {
+    $album = Album::where('slug', $slug)->firstOrFail();
+    $movies = $album->movies;
+    return view('album', compact('album', 'movies'));
+    }
+
 }
