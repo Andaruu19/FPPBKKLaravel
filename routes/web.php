@@ -3,8 +3,9 @@
 use App\Models\Album;
 use App\Models\Movie;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AlbumMovieController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\MovieController;
+use App\Http\Controllers\AlbumMovieController;
 
 Route::get('/', function () {
     return view('home');
@@ -27,6 +28,8 @@ Route::get('/movies', function () {
     ]);
 });
 
+Route::get('/movies/search', [MovieController::class, 'search'])->name('movies.search');
+
 Route::get('/movies/{movie:slug}', function (Movie $movie) {
     return view('movie', [
         'movie' => $movie
@@ -42,3 +45,8 @@ Route::delete('/albums/movies/{idAlbum}/{idMovie}', [AlbumMovieController::class
 Route::post('/albums/movies/{idAlbum}/{idMovie}', [AlbumMovieController::class, 'addMovie'])->name('album.addMovie');
 
 Route::get('/albums/{slug}', [AlbumController::class, 'show'])->name('albums.show');
+
+
+// Route::get('/movies/search', function() {
+//     return 'Route is working!';
+// });

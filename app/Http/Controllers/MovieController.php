@@ -14,4 +14,18 @@ class MovieController extends Controller
 
         return response()->json(['message' => 'Movie berhasil dihapus']);
     }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+    
+        // Mencari film berdasarkan title yang sesuai dengan query
+        if ($query) {
+            $movies = Movie::where('title', 'LIKE', "%{$query}%")->get();
+        } else {
+            $movies = collect(); // Return empty collection jika tidak ada query
+        }
+    
+        // Mengirim hasil pencarian ke view
+        return view('moviesearch', compact('movies'));
+    }
 }
