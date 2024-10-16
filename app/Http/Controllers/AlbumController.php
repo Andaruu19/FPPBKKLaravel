@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Album;
@@ -64,9 +65,8 @@ class AlbumController extends Controller
 
     public function show($slug)
     {
-    $album = Album::where('slug', $slug)->firstOrFail();
-    $movies = $album->movies;
-    return view('album', compact('album', 'movies'));
+        $album = Album::where('slug', $slug)->firstOrFail();
+        $movies = $album->movies()->simplePaginate(6);
+        return view('album', compact('album', 'movies'));
     }
-
 }
