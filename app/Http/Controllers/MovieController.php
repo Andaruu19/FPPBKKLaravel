@@ -2,11 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
+    // Method untuk menampilkan semua film berdasarkan genre
+    public function index()
+    {
+        // Mengambil semua genre beserta film-filmnya
+        $genres = Genre::with('movies')->get();
+
+        // Mengirim data genre dan film ke view
+        return view('movies', compact('genres'));
+    }
     public function delete($id)
     {
         $movie = Movie::find($id);

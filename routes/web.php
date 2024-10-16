@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\AlbumMovieController;
+use App\Models\Genre;
 
 Route::get('/', function () {
     return view('home');
@@ -24,7 +25,8 @@ Route::get('/collection', function () {
 Route::get('/movies', function () {
     return view('movies', [
         'movies' => Movie::all(),
-        'albums' => Album::all()
+        'albums' => Album::all(),
+        'genres' => Genre::all()
     ]);
 });
 
