@@ -102,10 +102,10 @@
 
                     @foreach ($albums as $album)
                         <div class="mt-6 flow-root sm:mt-8">
-                            <div class="divide-y divide-gray-200 dark:divide-gray-700">
+                            <div class="divide-y divide-gray-200">
                                 <div class="grid gap-4 pb-4 md:grid-cols-12 md:gap-6 md:pb-6">
                                     <dl class="order-1 w-1/2 max-w-sm md:order-1 md:col-span-3">
-                                        <img class="rounded" src="https://placehold.co/300x200" alt="" />
+                                        <img class="h-16 w-16 rounded" src="{{ URL('images/folder.png') }}" alt="" />
                                     </dl>
                                     <dl class="order-3 items-center md:order-1 md:col-span-3">
                                         <dd class="text-base font-semibold text-white">
