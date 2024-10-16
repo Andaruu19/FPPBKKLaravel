@@ -3,7 +3,7 @@
         <div class="container relative w-screen">
             <div
                 id="navbar"
-                class="navbar fixed z-10 flex w-screen items-center justify-between bg-zinc-900/[0.5] p-8 py-1 transition-opacity duration-300"
+                class="navbar fixed z-50 flex w-screen items-center justify-between bg-zinc-900/[0.5] p-8 py-1 transition-opacity duration-300"
             >
                 <section class="flex items-center">
                     <img class="w-32" src="{{ URL('images/logo-main.png') }}" alt="" />
