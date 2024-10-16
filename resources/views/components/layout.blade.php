@@ -15,9 +15,7 @@
             <x-navbar />
 
             <main>
-                <div class="mx-auto max-w-7xl py-6 text-white sm:px-6 lg:px-8">
-                    {{ $slot }}
-                </div>
+                {{ $slot }}
             </main>
         </div>
     </body>
